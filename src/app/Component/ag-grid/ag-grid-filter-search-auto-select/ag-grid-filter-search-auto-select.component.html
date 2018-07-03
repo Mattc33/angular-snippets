@@ -1,0 +1,14 @@
+<section>
+    <h3>Auto Select on Filter Search</h3>
+    <ag-grid-angular class="ag-theme-balham" 
+        [columnDefs]="columnDefs" [rowData]="rowData" [animateRows]="true"
+        [rowSelection]="single" [suppressRowClickSelection]="true"
+        (filterChanged)="filterChanged()"
+        [floatingFilter]="true" [enableSorting]="true"
+        [enableColResize]="true"
+
+        (gridReady)="onGridReady($event)"
+    >
+    </ag-grid-angular>  
+</section>
+    

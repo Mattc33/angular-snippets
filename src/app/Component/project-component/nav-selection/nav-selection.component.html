@@ -1,0 +1,23 @@
+<nz-select 
+    nzShowSearch 
+    nzAllowClear 
+    nzPlaceHolder="Select..." 
+    [(ngModel)]="selectedValue"
+    (ngModelChange)="navigationHandler($event)"
+>
+    <nz-option-group nzLabel="Home">
+        <nz-option nzLabel="Home" nzValue="home" routerLink="home"></nz-option>
+    </nz-option-group>
+    <nz-option-group nzLabel="Core Angular">
+        <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+        <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+        <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+    </nz-option-group>
+    <nz-option-group nzLabel="AG Grid">
+        <nz-option nzLabel="Selection State" nzValue="ag-grid-selection-state-component"></nz-option>
+        <nz-option nzLabel="Filter Search Auto Select" nzValue="ag-grid-filter-search-auto-select"></nz-option>
+    </nz-option-group>
+    <nz-option-group nzLabel="AG Grid">
+        <nz-option nzLabel="RXJS Basics" nzValue="rxjs-basics"></nz-option>
+    </nz-option-group>
+</nz-select>
