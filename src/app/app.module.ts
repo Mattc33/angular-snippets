@@ -20,14 +20,15 @@ import { ContentComponent } from './Container/content/content.component';
 import { AgGridSelectionStateComponent } from './Component/ag-grid/ag-grid-selection-state/ag-grid-selection-state.component';
 import { SiblingOneComponent } from './Component/ag-grid/ag-grid-selection-state/sibling-one/sibling-one.component';
 import { SiblingTwoComponent } from './Component/ag-grid/ag-grid-selection-state/sibling-two/sibling-two.component';
-import { NavSelectionComponent } from './Component/project-component/nav-selection/nav-selection.component';
+import { NavSelectionComponent } from './Container/nav-selection/nav-selection.component';
 import { IsoCodesSharedService } from './Component/ag-grid/Data/codes.shared.service';
 // tslint:disable-next-line:max-line-length
 import { AgGridSelectionStateSharedService } from './Component/ag-grid/ag-grid-selection-state/Shared/ag-grid-selection-state.shared.service';
-import { HomeComponent } from './Component/project-component/home/home.component';
+import { HomeComponent } from './Container/home/home.component';
 // tslint:disable-next-line:max-line-length
 import { AgGridFilterSearchAutoSelectComponent } from './Component/ag-grid/ag-grid-filter-search-auto-select/ag-grid-filter-search-auto-select.component';
 import { RxjsBasicsComponent } from './Component/rxjs/rxjs-basics/rxjs-basics.component';
+import { ToggleSwapButtonsComponent } from './Component/ui/toggle-swap-buttons/toggle-swap-buttons.component';
 
 const ag_grid_selection_state_router: Routes = [
     {
@@ -55,6 +56,10 @@ const ag_grid_selection_state_router: Routes = [
     {
         path: 'rxjs-basics',
         component: RxjsBasicsComponent
+    },
+    {
+        path: 'ui-toggle-swap-buttons',
+        component: ToggleSwapButtonsComponent
     }
 ];
 
@@ -70,7 +75,8 @@ const ag_grid_selection_state_router: Routes = [
         NavSelectionComponent,
         HomeComponent,
         AgGridFilterSearchAutoSelectComponent,
-        RxjsBasicsComponent
+        RxjsBasicsComponent,
+        ToggleSwapButtonsComponent
     ],
     imports: [
         // ! Core Angular Modules

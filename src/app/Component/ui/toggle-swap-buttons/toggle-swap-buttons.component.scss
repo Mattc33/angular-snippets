@@ -1,0 +1,23 @@
+section {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    .toggleContainer {
+        margin: auto;
+
+        .displayToggle {
+            display: none;
+        }
+
+        .toggle {
+            font-size: 2rem;
+            cursor: pointer;
+
+            &:hover {
+                color: #ccc;
+            }
+        }
+
+    }
+}
