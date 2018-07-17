@@ -29,6 +29,8 @@ import { HomeComponent } from './Container/home/home.component';
 import { AgGridFilterSearchAutoSelectComponent } from './Component/ag-grid/ag-grid-filter-search-auto-select/ag-grid-filter-search-auto-select.component';
 import { RxjsBasicsComponent } from './Component/rxjs/rxjs-basics/rxjs-basics.component';
 import { ToggleSwapButtonsComponent } from './Component/ui/toggle-swap-buttons/toggle-swap-buttons.component';
+import { KarmaBasicsComponent } from './Component/karma/karma-basics/karma-number.component';
+import { KarmaArrComponent } from './Component/karma/karma-basics/karma-string.component';
 
 const ag_grid_selection_state_router: Routes = [
     {
@@ -76,7 +78,9 @@ const ag_grid_selection_state_router: Routes = [
         HomeComponent,
         AgGridFilterSearchAutoSelectComponent,
         RxjsBasicsComponent,
-        ToggleSwapButtonsComponent
+        ToggleSwapButtonsComponent,
+        KarmaBasicsComponent,
+        KarmaArrComponent
     ],
     imports: [
         // ! Core Angular Modules

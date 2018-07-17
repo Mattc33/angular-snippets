@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GridApi } from 'ag-grid';
 
 import { IsoCodesSharedService } from '../../Data/codes.shared.service';
-import { AgGridSelectionStateSharedService } from './../Shared/ag-grid-selection-state.shared.service';
+import { AgGridSelectionStateSharedService } from '../Shared/ag-grid-selection-state.shared.service';
 
 @Component({
   selector: 'app-sibling-one',
