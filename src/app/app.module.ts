@@ -2,12 +2,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule, RouterLinkActive } from '@angular/router';
 
 // ! Third Party Components
 import { AgGridModule } from 'ag-grid-angular';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+import { PapaParseModule } from 'ngx-papaparse';
 
 // ! Containers
 import { AppComponent } from './app.component';
@@ -29,10 +30,12 @@ import { HomeComponent } from './Container/home/home.component';
 import { AgGridFilterSearchAutoSelectComponent } from './Component/ag-grid/ag-grid-filter-search-auto-select/ag-grid-filter-search-auto-select.component';
 import { RxjsBasicsComponent } from './Component/rxjs/rxjs-basics/rxjs-basics.component';
 import { ToggleSwapButtonsComponent } from './Component/ui/toggle-swap-buttons/toggle-swap-buttons.component';
-import { KarmaBasicsComponent } from './Component/karma/karma-basics/karma-number.component';
-import { KarmaArrComponent } from './Component/karma/karma-basics/karma-string.component';
+import { DynamicFormComponent } from './Component/ng-antd/dynamic-form/dynamic-form.component';
+import { BillTotalComponent } from './Component/mini-projects/bill-total/bill-total.component';
+// import { KarmaBasicsComponent } from './Component/karma/karma-basics/karma-number.component';
+// import { KarmaArrComponent } from './Component/karma/karma-basics/karma-string.component';
 
-const ag_grid_selection_state_router: Routes = [
+const router: Routes = [
     {
         path: 'home',
         component: HomeComponent
@@ -62,6 +65,14 @@ const ag_grid_selection_state_router: Routes = [
     {
         path: 'ui-toggle-swap-buttons',
         component: ToggleSwapButtonsComponent
+    },
+    {
+        path: 'ng-antd-dynamic-form',
+        component: DynamicFormComponent
+    },
+    {
+        path: 'mini-projects-bill-total',
+        component: BillTotalComponent
     }
 ];
 
@@ -79,13 +90,16 @@ const ag_grid_selection_state_router: Routes = [
         AgGridFilterSearchAutoSelectComponent,
         RxjsBasicsComponent,
         ToggleSwapButtonsComponent,
-        KarmaBasicsComponent,
-        KarmaArrComponent
+        DynamicFormComponent,
+        BillTotalComponent,
+        // KarmaBasicsComponent,
+        // KarmaArrComponent
     ],
     imports: [
         // ! Core Angular Modules
-        BrowserModule, BrowserAnimationsModule, FormsModule, RouterModule,
-        RouterModule.forRoot(ag_grid_selection_state_router),
+        BrowserModule, BrowserAnimationsModule, FormsModule, RouterModule, ReactiveFormsModule,
+        PapaParseModule,
+        RouterModule.forRoot(router),
 
         // ! Third Party Components
         AgGridModule.withComponents([]), NgZorroAntdModule

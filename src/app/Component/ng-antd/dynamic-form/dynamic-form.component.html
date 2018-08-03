@@ -1,0 +1,16 @@
+<form [formGroup]="exampleForm">
+    <button mat-button (click)="addAddress()">Add another FormGroup</button>
+
+    <div formArrayName="exampleFormArray" *ngFor="let ex of exampleForm.get('exampleFormArray').controls; let counter=index">
+
+        <div class="form-group-header">
+            Country Code {{counter + 1}}
+            <button class="delete-formgroup" *ngIf="exampleForm.get('exampleFormArray').controls.length > 1" (click)="removeAddress(counter)">X</button>
+        </div>
+
+        <div class="panel-body" [formGroupName]="counter">
+                <input placeholder="Origination Code" matInput formControlName="exampleInput" >
+        </div>
+
+    </div>
+</form>
