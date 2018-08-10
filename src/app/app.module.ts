@@ -36,7 +36,10 @@ import { HelloComponent } from './Component/dynamic-components/dynamic-component
 import { DirectivesFirstAttemptComponent } from './Component/directives/directives-first-attempt/directives-first-attempt.component';
 import { ChinaMobileParserComponent } from './Component/mini-projects/china-mobile-parser/china-mobile-parser.component';
 import { ToDoListComponent } from './Component/mini-projects/to-do-list/to-do-list.component';
-import { StringInterpolationComponent } from './Component/string-interpolation/string-interpolation.component';
+import { StringInterpolationComponent } from './Component/data-binding/string-interpolation/string-interpolation.component';
+import { PropertyBindingComponent } from './Component/data-binding/property-binding/property-binding.component';
+import { OnewayDataBindingComponent } from './Component/data-binding/oneway-data-binding/oneway-data-binding.component';
+import { TwowayDataBindingComponent } from './Component/data-binding/twoway-data-binding/twoway-data-binding.component';
 
 const router: Routes = [
     {
@@ -88,7 +91,12 @@ const router: Routes = [
     {
         path: 'data-binding-string-interpolation',
         component: StringInterpolationComponent
+    },
+    {
+        path: 'data-binding-property-binding',
+        component: PropertyBindingComponent
     }
+ 
 ];
 
 @NgModule({
@@ -113,6 +121,9 @@ const router: Routes = [
         ChinaMobileParserComponent,
         ToDoListComponent,
         StringInterpolationComponent,
+        PropertyBindingComponent,
+        OnewayDataBindingComponent,
+        TwowayDataBindingComponent,
     ],
     imports: [
         // ! Core Angular Modules
