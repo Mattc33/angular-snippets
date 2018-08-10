@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bill-total',
-  templateUrl: './bill-total.component.html',
-  styleUrls: ['./bill-total.component.scss']
+  selector: 'app-china-mobile-parser',
+  templateUrl: './china-mobile-parser.component.html',
+  styleUrls: ['./china-mobile-parser.component.scss']
 })
-export class BillTotalComponent implements OnInit {
+export class ChinaMobileParserComponent implements OnInit {
 
     constructor(
+
     ) { }
 
     ngOnInit() {

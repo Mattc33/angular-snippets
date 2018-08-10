@@ -8,7 +8,6 @@ import { Routes, RouterModule, RouterLinkActive } from '@angular/router';
 // ! Third Party Components
 import { AgGridModule } from 'ag-grid-angular';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
-import { PapaParseModule } from 'ngx-papaparse';
 
 // ! Containers
 import { AppComponent } from './app.component';
@@ -32,8 +31,12 @@ import { RxjsBasicsComponent } from './Component/rxjs/rxjs-basics/rxjs-basics.co
 import { ToggleSwapButtonsComponent } from './Component/ui/toggle-swap-buttons/toggle-swap-buttons.component';
 import { DynamicFormComponent } from './Component/ng-antd/dynamic-form/dynamic-form.component';
 import { BillTotalComponent } from './Component/mini-projects/bill-total/bill-total.component';
-// import { KarmaBasicsComponent } from './Component/karma/karma-basics/karma-number.component';
-// import { KarmaArrComponent } from './Component/karma/karma-basics/karma-string.component';
+import { DynamicComponentsFirstAttemptComponent } from './Component/dynamic-components/dynamic-components-first-attempt/dynamic-components-first-attempt.component';
+import { HelloComponent } from './Component/dynamic-components/dynamic-components-first-attempt/hello/hello.component';
+import { DirectivesFirstAttemptComponent } from './Component/directives/directives-first-attempt/directives-first-attempt.component';
+import { ChinaMobileParserComponent } from './Component/mini-projects/china-mobile-parser/china-mobile-parser.component';
+import { ToDoListComponent } from './Component/mini-projects/to-do-list/to-do-list.component';
+import { StringInterpolationComponent } from './Component/string-interpolation/string-interpolation.component';
 
 const router: Routes = [
     {
@@ -73,6 +76,18 @@ const router: Routes = [
     {
         path: 'mini-projects-bill-total',
         component: BillTotalComponent
+    },
+    {
+        path: 'mini-projects-china-mobile',
+        component: ChinaMobileParserComponent
+    },
+    {
+        path: 'mini-projects-to-do-list',
+        component: ToDoListComponent
+    },
+    {
+        path: 'data-binding-string-interpolation',
+        component: StringInterpolationComponent
     }
 ];
 
@@ -92,13 +107,16 @@ const router: Routes = [
         ToggleSwapButtonsComponent,
         DynamicFormComponent,
         BillTotalComponent,
-        // KarmaBasicsComponent,
-        // KarmaArrComponent
+        DynamicComponentsFirstAttemptComponent,
+        HelloComponent,
+        DirectivesFirstAttemptComponent,
+        ChinaMobileParserComponent,
+        ToDoListComponent,
+        StringInterpolationComponent,
     ],
     imports: [
         // ! Core Angular Modules
         BrowserModule, BrowserAnimationsModule, FormsModule, RouterModule, ReactiveFormsModule,
-        PapaParseModule,
         RouterModule.forRoot(router),
 
         // ! Third Party Components

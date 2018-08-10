@@ -1,0 +1,4 @@
+<button class="uploadBtn" mat-button (click)="fileInput.click()">
+    <span>Select CSV File</span>
+    <input #fileInput type="file" (change)="uploadBtnHandler($event)" accept=".csv" style="display:none;" />
+</button>
