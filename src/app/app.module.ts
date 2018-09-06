@@ -8,6 +8,9 @@ import { Routes, RouterModule, RouterLinkActive } from '@angular/router';
 // ! Third Party Components
 import { AgGridModule } from 'ag-grid-angular';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+import { StoreModule } from '@ngrx/store'
+import { simpleReducer } from '../app/Component/ngrx/ngrx-basics/simple.reducer'
+import { postReducer } from '../app/Component/ngrx/ngrx-post/post.reducer'
 
 // ! Containers
 import { AppComponent } from './app.component';
@@ -40,6 +43,8 @@ import { StringInterpolationComponent } from './Component/data-binding/string-in
 import { PropertyBindingComponent } from './Component/data-binding/property-binding/property-binding.component';
 import { OnewayDataBindingComponent } from './Component/data-binding/oneway-data-binding/oneway-data-binding.component';
 import { TwowayDataBindingComponent } from './Component/data-binding/twoway-data-binding/twoway-data-binding.component';
+import { NgrxBasicsComponent } from './Component/ngrx/ngrx-basics/ngrx-basics.component';
+import { NgrxPostComponent } from './Component/ngrx/ngrx-post/ngrx-post.component';
 
 const router: Routes = [
     {
@@ -95,9 +100,12 @@ const router: Routes = [
     {
         path: 'data-binding-property-binding',
         component: PropertyBindingComponent
+    },
+    {
+        path: 'ngrx-basics',
+        component: NgrxBasicsComponent
     }
- 
-];
+]
 
 @NgModule({
     declarations: [
@@ -124,6 +132,8 @@ const router: Routes = [
         PropertyBindingComponent,
         OnewayDataBindingComponent,
         TwowayDataBindingComponent,
+        NgrxBasicsComponent,
+        NgrxPostComponent,
     ],
     imports: [
         // ! Core Angular Modules
@@ -131,7 +141,8 @@ const router: Routes = [
         RouterModule.forRoot(router),
 
         // ! Third Party Components
-        AgGridModule.withComponents([]), NgZorroAntdModule
+        AgGridModule.withComponents([]), NgZorroAntdModule,
+        StoreModule.forRoot({message: simpleReducer, post: postReducer})
     ],
     exports: [
         RouterModule
